@@ -139,7 +139,8 @@ function handleOperands() {
   }
   if (firstNum !== null) {
     if (!displayValue) {
-      return;
+      updateDisplay(firstNum);
+      displayValue = "";
     } else {
       secondNum = parseFloat(displayValue);
       let result = operate(currentOperator, firstNum, secondNum);

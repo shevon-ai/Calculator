@@ -137,7 +137,7 @@ function handleOperands() {
   if (periodButton.disabled) {
     periodButton.disabled = false;
   }
-  if (firstNum !== null) {
+  if (firstNum !== null && firstNum !== "-") {
     if (!displayValue) {
       updateDisplay(firstNum);
       displayValue = "";
@@ -154,6 +154,10 @@ function handleOperands() {
       }
       displayValue = "";
     }
+  } else if (firstNum === "-" && displayValue !== ""){
+    firstNum = parseFloat(displayValue) * -1;
+    updateDisplay(firstNum);
+    displayValue = "";
   }
 }
 

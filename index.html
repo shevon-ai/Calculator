@@ -10,39 +10,43 @@
         <script src="calculator.js" defer></script>
     </head>
     <body>
-        <h1 class="heading">CALCULATOR</h1>
-        <table class="calculator">
-            <tr>
-                <td colspan="4"> <input class="display-box" type="text" id="result" placeholder="0" disabled /> </td>
-            </tr>
-            <tr>
-                <td colspan="2"> <input type="button" value="CA" id="clear-all-btn" /> </td>
-                <td colspan="2"> <input type="button" value="DEL" id="backspace-btn" /> </td>
-            </tr>
-            <tr>
-                <td> <input type="button" class="number" value="1"/> </td>
-                <td> <input type="button" class="number" value="2"/> </td>
-                <td> <input type="button" class="number" value="3"/> </td>
-                <td> <input type="button" value="/" class="operator"/> </td>
-            </tr>
-            <tr>
-                <td> <input type="button" class="number" value="4"/> </td>
-                <td> <input type="button" class="number" value="5"/> </td>
-                <td> <input type="button" class="number" value="6"/> </td>
-                <td> <input type="button" value="-" class="operator"/> </td>
-            </tr>
-            <tr>
-                <td> <input type="button" class="number" value="7"/> </td>
-                <td> <input type="button" class="number" value="8"/> </td>
-                <td> <input type="button" class="number" value="9"/> </td>
-                <td> <input type="button" value="+" class="operator"/> </td>
-            </tr>
-            <tr>
-                <td> <input type="button" value="." id="period"/> </td>
-                <td> <input type="button" class="number" value="0"/> </td>
-                <td> <input type="button" value="="id="equals-btn"/> </td>
-                <td> <input type="button" value="*" class="operator"/> </td>
-            </tr>
-        </table>
+        <header>
+            <h1 class="heading">CALCULATOR</h1>
+        </header>
+        <main>
+            <table class="calculator">
+                <tr>
+                    <td colspan="4"> <input class="display-box" type="text" id="result" placeholder="0" disabled /> </td>
+                </tr>
+                <tr>
+                    <td colspan="2"> <input type="button" value="CA" id="clear-all-btn" /> </td>
+                    <td colspan="2"> <input type="button" value="DEL" id="backspace-btn" /> </td>
+                </tr>
+                <tr>
+                    <td> <input type="button" class="number" value="1"/> </td>
+                    <td> <input type="button" class="number" value="2"/> </td>
+                    <td> <input type="button" class="number" value="3"/> </td>
+                    <td> <input type="button" value="/" class="operator"/> </td>
+                </tr>
+                <tr>
+                    <td> <input type="button" class="number" value="4"/> </td>
+                    <td> <input type="button" class="number" value="5"/> </td>
+                    <td> <input type="button" class="number" value="6"/> </td>
+                    <td> <input type="button" value="-" class="operator"/> </td>
+                </tr>
+                <tr>
+                    <td> <input type="button" class="number" value="7"/> </td>
+                    <td> <input type="button" class="number" value="8"/> </td>
+                    <td> <input type="button" class="number" value="9"/> </td>
+                    <td> <input type="button" value="+" class="operator"/> </td>
+                </tr>
+                <tr>
+                    <td> <input type="button" value="." id="period"/> </td>
+                    <td> <input type="button" class="number" value="0"/> </td>
+                    <td> <input type="button" value="="id="equals-btn"/> </td>
+                    <td> <input type="button" value="*" class="operator"/> </td>
+                </tr>
+            </table>
+        </main>
     </body>
 </html>

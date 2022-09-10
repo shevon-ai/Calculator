@@ -278,6 +278,11 @@ Array.prototype.forEach.call(buttons, (button) => {
   });
 });
 
+/**
+ * The JavaScript array prototype constructor is used to allow to add new methods 
+ * and properties to the Array() object. If the method is constructed, then it will 
+ * available for every array. prototype is a property available with all JavaScript objects.
+ */
 // MATHEMATICAL OPERATOR BUTTONS
 Array.prototype.forEach.call(operators, (operator) => {
   operator.addEventListener("click", function () {

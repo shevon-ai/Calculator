@@ -2,17 +2,18 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    display: flex;
-    justify-content: center;
     background-color: antiquewhite;
-    position: relative;
+    text-align: center;
+}
+
+header{
+    text-align: center;
+}
+main{
+    text-align: center;
 }
 
 .heading {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
     font-weight: bold;
     color: #16213E;
     font-size: 48px;
@@ -23,7 +24,7 @@ body {
     border-radius: 1em;
     height: 450px;
     width: 400px;
-    margin-top: 150px;
+    margin: 0 auto;
     background-color: #16213E;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }

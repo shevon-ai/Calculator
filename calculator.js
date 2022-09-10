@@ -150,9 +150,10 @@ function handleOperators(operatorValue, op) {
       currentOperator = operatorValue;
       if (previousOperator !== null && currentOperator === "-") {
         secondNum = "-";
+        currentOperator = previousOperator;
+      } else {
+        currentOperator = operatorValue;
       }
-      currentOperator = previousOperator;
-      return;
     } else {
       if (secondNum === "-") {
         secondNum = parseFloat(displayValue) * -1;

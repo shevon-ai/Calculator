@@ -145,30 +145,31 @@ function handleOperators(operatorValue, op) {
     }
   });
   if (firstNum && firstNum !== "-") {
-    if (!displayValue) {
+    if (displayValue === "") {
       previousOperator = currentOperator;
       currentOperator = operatorValue;
-      if (previousOperator && currentOperator === "-") {
+      if (previousOperator !== null && currentOperator === "-") {
         secondNum = "-";
       }
+      currentOperator = previousOperator;
       return;
     } else {
       if (secondNum === "-") {
         secondNum = parseFloat(displayValue) * -1;
       } else {
         secondNum = parseFloat(displayValue);
-        let result = operate(currentOperator, firstNum, secondNum);
-        if (result % 1 !== 0) {
-          let roundedResult = roundToTwo(result);
-          updateDisplay(roundedResult);
-          firstNum = roundedResult;
-        } else {
-          firstNum = result;
-          updateDisplay(result);
-        }
-        currentOperator = operatorValue;
-        displayValue = "";
       }
+      let result = operate(currentOperator, firstNum, secondNum);
+      if (result % 1 !== 0) {
+        let roundedResult = roundToTwo(result);
+        updateDisplay(roundedResult);
+        firstNum = roundedResult;
+      } else {
+        firstNum = result;
+        updateDisplay(result);
+      }
+      currentOperator = operatorValue;
+      displayValue = "";
     }
   } else if (firstNum == null && displayValue === "") {
     if (operatorValue === "-") {
@@ -202,7 +203,11 @@ function handleOperands() {
       updateDisplay(firstNum);
       displayValue = "";
     } else {
-      secondNum = parseFloat(displayValue);
+      if (secondNum === "-") {
+        secondNum = parseFloat(displayValue) * -1;
+      } else {
+        secondNum = parseFloat(displayValue);
+      }
       let result = operate(currentOperator, firstNum, secondNum);
       if (result % 1 !== 0) {
         let roundedResult = roundToTwo(result);
